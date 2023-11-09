@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzabot Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="pizzaForm" action="/action_page.php">
+            <h3>Delivery details</h3><br>
+            First name: <input type="text" id="firstNameInput" name="firstName" required><br>
+            Last name: <input type="text" id="lastNameInput" name="lastName" required><br>
+            Phone: <input type="tel" id="phoneInput" name="phone" required><br>
+            Adress: <input type="text" id="adressInput" name="adress" required><br>
+            <h3>Your order</h3>
+            Pizza:
+            <select id="pizza" name="pizza" required>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="hawaiian">Hawaii</option>
+                <option value="pepperoni">Pepperoni</option>
+            </select><br>
+            Quantity of Pizzas: <input type="number" id="quantityOfPizzasInput" name="numberOfPizzas" required><br><br>
+            <input type="button" id="submitBtn" value="Order Pizza"><br><br>
+        </form>
+
+        <div class="orderDetails">
+            <h1>Details of your order:</h1>
+        </div>
+        <div class="pizza-image">
+            <img id="vegetarianImage" src="/images/vegetarian-pizza.jpg" alt="Vegetarian Pizza" class="pizza-image">
+            <img id="hawaiianImage" src="/images/hawaiian-pizza.jpg" alt="Hawaiian Pizza" class="pizza-image">
+            <img id="pepperoniImage" src="/images/pepperoni-pizza.jpg" alt="Pepperoni Pizza" class="pizza-image">
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="pizzabotForm.js"></script>
+</body>
+
+</html>
