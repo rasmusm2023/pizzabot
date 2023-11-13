@@ -38,13 +38,10 @@ while (!orderCorrect) {
       // Skicka en alert med orderbekräftelse
       orderTotal = orderQuantity * pizzaPrice;
 
-      if (orderQuantity <= 0) {
-        alert("Please enter a valid number of pizzas.");
-        orderQuantity = prompt(`How many ${orderName} pizzas do you want?`);
+      if (orderQuantity <= 3) {
+        cookingTime = 10;
       } else if (orderQuantity >= 6) {
         cookingTime = 20;
-      } else if (orderQuantity <= 3) {
-        cookingTime = 10;
       } else {
         cookingTime = 15;
       }
@@ -57,9 +54,10 @@ while (!orderCorrect) {
       console.log(`Your pizzas are: ${orderQuantity} ${orderName}`);
       console.log(`Your order total is: ${orderTotal} kr.`);
       console.log(`The pizzas will take: ${cookingTime} minutes.`);
-    } else {
-      alert("Please enter a valid number of pizzas.");
-      orderQuantity = prompt(`How many ${orderName} pizzas do you want?`);
-    }
+    } else
+      while (orderQuantity <= 0) {
+        alert("Please enter a valid number of pizzas.");
+        orderQuantity = prompt(`How many ${orderName} pizzas do you want?`);
+      }
   }
 }

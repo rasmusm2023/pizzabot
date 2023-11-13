@@ -10,6 +10,18 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const quantityOfPizzas = document.getElementById(
     "quantityOfPizzasInput"
   ).value;
+
+  if (
+    !firstName ||
+    !lastName ||
+    !phone ||
+    !address ||
+    !pizza ||
+    !quantityOfPizzas
+  ) {
+    alert("Please fill out all fields before ordering the pizza.");
+    return;
+  }
   const orderTotal = quantityOfPizzas * pizzaPrice;
   const orderDetails = document.querySelector(".orderDetails");
 
